@@ -1,0 +1,289 @@
+/* -------------------------------------------------------------------------- */
+/*                        VARIABLES & REUSABLE CLASSES                        */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------- VARIABLES ------------------------------- */
+:root {
+    /* colors */
+    --color-white: hsl(0, 0%, 100%);
+    --color-stone-100: hsl(30, 54%, 90%);
+    --color-stone-150: hsl(30, 18%, 87%);
+    --color-stone-600: hsl(30, 10%, 34%);
+    --color-stone-900: hsl(24, 5%, 18%);
+    --color-brown-800: hsl(14, 45%, 36%);
+    --color-rose-50: hsl(330, 100%, 98%);
+    --color-rose-800: hsl(332, 51%, 32%);
+
+    /* typography */
+    --font-family-primary: 'Young Serif', sans-serif;
+    --font-family-secondary: 'Outfit', sans-serif;
+
+    /* spacing */
+    --spacing-1600: 128px;
+    --spacing-600: 48px;
+    --spacing-500: 40px;
+    --spacing-400: 32px;
+    --spacing-300: 24px;
+    --spacing-200: 16px;
+    --spacing-150: 12px;
+    --spacing-100: 8px;
+
+    --border-divider-height: 1px;
+
+    /* responsive variables */
+    --font-size-text-preset-1: 36px;
+    --font-size-text-preset-2: 28px;
+    --font-size-text-preset-3: 20px;
+    --font-size-text-preset-4: 16px;
+
+    --site-padding: 0px;
+
+    --recipe-card-container-border-radius: 0px;
+
+    --featured-image-height: 171px;
+
+    --featured-image-border-radius: 0px;
+    --featured-image-margin-top: 0px;
+    --featured-image-padding: 0px;
+
+    --recipe-text-content-container-padding: var(--spacing-500) var(--spacing-400);
+
+    @media only screen and (min-width: 481px) {
+        --font-size-text-preset-1: 40px;
+
+        --site-padding: var(--spacing-1600) 76px;
+
+        --recipe-card-container-border-radius: 24px;
+
+        --featured-image-height: 300px;
+        --featured-image-border-radius: 12px;
+        --featured-image-margin-top: var(--spacing-500);
+        --featured-image-padding: 0px var(--spacing-500);
+
+        --recipe-text-content-container-padding: var(--spacing-500);
+    }
+
+
+}
+
+.text-preset-1 {
+    line-height: 1;
+    font-size: var(--font-size-text-preset-1);
+    letter-spacing: 0px;
+    color: var(--color-stone-900);
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+}
+
+
+.text-preset-2 {
+    line-height: 1;
+    font-size: var(--font-size-text-preset-2);
+    letter-spacing: 0px;
+    color: var(--color-brown-800);
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+}
+
+.text-preset-3 {
+    line-height: 1;
+    font-size: var(--font-size-text-preset-3);
+    letter-spacing: 0px;
+    color: var(--color-rose-800);
+    font-family: var(--font-family-secondary);
+    font-weight: 600;
+}
+
+.text-preset-4 {
+    line-height: 1.5;
+    font-size: var(--font-size-text-preset-4);
+    letter-spacing: 0px;
+    color: var(--color-stone-600);
+    font-family: var(--font-family-secondary);
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.m-b-1600 {
+    margin-bottom: 128px;
+}
+
+.m-b-600 {
+    margin-bottom: 48px;
+}
+
+.m-b-500 {
+    margin-bottom: 40px;
+}
+
+.m-b-400 {
+    margin-bottom: 32px;
+}
+
+.m-b-300 {
+    margin-bottom: 24px;
+}
+
+.m-b-200 {
+    margin-bottom: 16px;
+}
+
+.m-b-150 {
+    margin-bottom: 12px;
+}
+
+.m-b-100 {
+    margin-bottom: 8px;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    li {
+        display: flex;
+        width: 100%;
+    }
+
+    li::before {
+        font-weight: bold;
+        color: var(--color-rose-800);
+        height: 100%;
+        min-width: var(--spacing-500);
+        padding-left: 8px;
+        padding-right: 8px;
+        box-sizing: border-box;
+    }
+}
+
+.custom-ol {
+    counter-reset: css-counter;
+
+    li {
+        counter-increment: css-counter;
+    }
+
+    li::before {
+        content: counter(css-counter) ".";
+    }
+}
+
+.custom-ul {
+
+    li {
+        align-items: center;
+    }
+    
+    li::before {
+        content: "•";
+    }
+}
+
+* {
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    height: 100%;
+}
+
+main {
+    background-color: var(--color-stone-100);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: var(--site-padding);
+}
+
+.recipe-card-container {
+    background-color: var(--color-white);
+    border-radius: var(--recipe-card-container-border-radius);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    max-width: 736px;
+}
+
+.featured-image-container {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--featured-image-border-radius);
+    margin-top: var(--featured-image-margin-top);
+    padding: var(--featured-image-padding);
+    max-height: var(--featured-image-height);
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.featured-image {
+    max-height: var(--featured-image-height);
+    min-height: var(--featured-image-height);
+    border-radius: var(--featured-image-border-radius);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+.recipe-text-content-container {
+    padding: var(--recipe-text-content-container-padding);
+}
+
+
+.preparation-time-container {
+    background-color: var(--color-rose-50);
+    padding: var(--spacing-300);
+    border-radius: 12px;
+}
+
+.divider {
+    width: 100%;
+    height: 0px;
+    border-bottom: var(--border-divider-height) solid var(--color-stone-150);
+    margin-top: -1px;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+
+    .row {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: var(--spacing-150);
+        padding-bottom: calc(var(--spacing-150) - var(--border-divider-height));
+        padding-left: var(--spacing-400);
+        padding-right: var(--spacing-400);
+        grid-column-gap: var(--spacing-200);
+        box-sizing: border-box;
+        border-bottom: var(--border-divider-height) solid var(--color-stone-150);
+
+        .grid-item.value {
+            color: var(--color-brown-800);
+        }
+    }
+
+    .row:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0px;
+    }
+}
+
+footer {
+    display: none;
+}
+
+
+
+
+
+
