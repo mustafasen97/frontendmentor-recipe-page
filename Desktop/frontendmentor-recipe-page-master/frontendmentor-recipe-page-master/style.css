@@ -1,0 +1,346 @@
+:root {
+
+    --font-family-primary:  "Young Serif", serif;
+    --font-family-secondary: "Outfit", serif;
+
+    --font-size-xl: 4rem;
+    --font-size-lg: 2.8rem;
+    --font-size-md: 2rem;
+    --font-size-sm: 1.6rem;
+ 
+
+  
+    --color-white: hsl(0, 0%, 100%);
+    --color-stone-100: hsl(30, 54%, 90%);
+    --color-stone-150: hsl(30, 18%, 87%);
+    --color-stone-600: hsl(30, 10%, 34%);
+    --color-stone-900: hsl(24, 5%, 18%);
+    --color-brown-800: hsl(14, 45%, 36%);
+    --color-rose-50: hsl(330, 100%, 98%);
+    --color-rose-800: hsl(332, 51%, 32%);
+
+
+
+    --empty-10: 0.3rem;
+    --empty-25: 0.5rem;
+    --empty-50: 1rem;
+    --empty-100: 1.5rem;
+    --empty-150: 2rem;
+    --empty-200: 2.5rem;
+    --empty-250: 3rem;
+    --empty-300: 4rem;
+    --empty-500: 10rem;
+    --empty-600: 13rem;
+
+
+}
+
+
+
+
+html {
+    font-size: 10px;
+}
+
+
+.bold-extra {
+    font-weight: 600;
+}
+
+
+.text-style-h1 {
+    line-height: 1.3;
+    font-family: var(--font-family-primary);
+    color: black;
+    font-size: var(--font-size-xl);
+   
+
+}
+
+.text-style-pr {
+    line-height: 1.5;
+    font-family: var(--font-family-secondary);
+    color: var(--color-stone-600);
+    font-size: var(--font-size-sm);
+
+}
+
+.text-style-h2 {
+    font-family: var(--font-family-primary);
+    color: var(--color-brown-800);
+    font-size: var(--font-size-lg);
+}
+
+
+.mg-left {
+    margin-left: 1.2rem;
+}
+
+
+main {
+    background-color: var(--color-stone-100);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;  
+    
+}
+
+
+.recipe-card-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 736px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    border-radius: 25px;
+    padding: var(--empty-300);
+    margin-top: var(--empty-600);
+    margin-bottom: var(--empty-500);
+    max-height: 100%;
+    
+    
+}
+
+.img-container {
+    height: 300px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.omelette-img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    
+}
+
+.recipe-header {
+    margin-top: var(--empty-250);
+    
+}
+
+.recipe-brief {
+    margin-top: var(--empty-150);
+}
+
+.recipe-preparation {
+    margin-top: var(--empty-250);
+   
+    background-color: var(--color-rose-50);
+    border-radius: 12px;
+    padding: var(--empty-150);
+}
+
+.prep-header {
+    padding: var(--empty-25);
+    font-family: var(--font-family-secondary);
+    color:  var(--color-rose-800);
+    font-size: var(--font-size-md);
+}
+
+.prep-content {
+    list-style:disc;
+    margin-left: var(--empty-200);
+    margin-top: var(--empty-25);
+    
+}
+
+
+
+.prep-content li {
+    padding: var(--empty-25);
+    margin-left: var(--empty-25);
+}
+
+.prep-content li::marker {
+    color: var(--color-rose-800);
+    font-size: 12px;
+    
+}
+
+.prep-time {
+    margin-left: 9px;
+}
+
+
+.food-recipe {
+    margin-top: var(--empty-300);
+   
+}
+
+.food-ingredients {
+    list-style: disc;
+    margin-top: var(--empty-150);
+    margin-left: var(--empty-200);
+    
+}
+
+.food-ingredients li {
+    padding: var(--empty-10);
+
+}
+
+.food-ingredients li::marker {
+    color: var(--color-brown-800);
+    font-size: 12px;
+}
+
+hr {
+    margin-top: var(--empty-200);
+  
+    opacity: 0.3;
+}
+
+
+
+.instructions-list-container {
+    margin-top: var(--empty-250);
+    
+  
+    
+   
+}
+.instructions-list {
+    margin-top: var(--empty-150);
+    padding-left: 0; /* Varsayılan boşluğu kaldır */
+    list-style: none; /* Tarayıcının kendi numaralarını kaldır */
+}
+
+.instructions-content {
+    display: flex;
+    align-items: flex-start; 
+    gap: 1.3rem;
+    margin-top: 0.7rem;
+    margin-left: 0.7rem;
+  
+}
+
+.instructions-list-numbers {
+    flex-shrink: 0; 
+    width: 2rem; 
+    text-align: left; 
+    font-weight: bold; 
+    font-size: 1.6rem;
+    color: var(--color-brown-800);
+    
+}
+
+.instructions-content span {
+   
+    line-height: 1.5; 
+    
+}
+
+
+
+
+.nutrition-container {
+    margin-top: var(--empty-250);
+    
+    
+}
+
+.nutrition-description {
+    margin-top: var(--empty-200);
+}
+
+
+.nutrition-table {
+    
+    width: 100%;
+    margin-top: var(--empty-100);
+    
+    
+    
+   
+}
+
+.nutrition-table td {
+    padding: var(--empty-50);
+   
+   
+    
+        
+}
+
+.nutrition-table td:first-child {
+    
+    position: relative;
+    left: var(--empty-150);
+    
+    
+        
+}
+
+.nutrition-item {
+    border-bottom: 1px solid var(--color-stone-150);
+    
+
+}
+
+.nutrit-value {
+    color: var(--color-brown-800);
+    
+    margin-right: 50px;
+}
+
+
+
+
+
+@media screen and (max-width:375px) {
+
+    html {
+        font-size: 9px;
+    }
+
+    .recipe-card-container {
+        
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-radius: 0px;
+        padding: 0;
+       
+    }
+
+    .img-container {
+      
+        min-height: 150px;
+      
+       
+        
+        
+       
+    }
+
+    
+    .omelette-img {
+        
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+
+    .text-contents {
+        padding: var(--empty-250);
+        padding-top: 10px;       
+        
+    }
+
+    .text-style-h1 {
+        line-height: 1;
+    }
+
+ 
+
+    
+}
