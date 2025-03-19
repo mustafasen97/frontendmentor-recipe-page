@@ -104,16 +104,10 @@ main {
 }
 
 .img-container {
-    max-height: 300px;
-    min-height: 300px;
+    height: 300px
     border-radius: 10px;
     width: 100%;
-  
-    min-width: 100%;
     box-sizing: border-box;
-    
-    
-   
 }
 
 .omelette-img {
